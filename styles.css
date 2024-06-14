@@ -1,0 +1,328 @@
+
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7973ee;
+}
+
+video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: 1s;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.navbar {
+    padding: 12px 10px;
+}
+
+.navbar .containerr {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+}
+
+.navbar .logo {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul a {
+    display: block;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.navbar ul:has(a:hover) a:not(:hover) {
+    filter: blur(10px);
+}
+
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.page-content .inner-content {
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
+}
+
+.page-content .inner-content .heading {
+    font-size: 5rem;
+}
+
+.page-content .inner-content .heading .txt2 {
+    color: #00ffbb;
+}
+
+
+.page-content .buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.page-content .buttons a {
+    display: block;
+    text-decoration: none;
+    margin: 0 16px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    min-width: 100px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(60px);
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #ffffff1e;
+}
+
+.page-content .buttons a.active {
+    background-color: white;
+    padding: 20px 50px;
+    color: black;
+}
+
+.page-content .buttons a.active:hover {
+    box-shadow: 0 0 40px rgb(190, 176, 176);
+}
+
+.page-content .buttons a:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(40deg, #ffffff00, #ffffff20, #ffffff00);
+    z-index: -1;
+}
+
+.page-content .buttons a:nth-child(2):hover::before { 
+    left: 100%;
+}
+
+.page-content .buttons a:nth-child(2):hover {
+    transition-delay: .3s;
+    box-shadow: 0 0 40px rgb(238, 5, 5);
+    background-color: #ff310c;
+}
+
+.page-content .social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.page-content .social-links a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    backdrop-filter: blur(160px);
+    background: #c624f71e;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.page-content .social-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #00ffbb;
+    z-index: -1;
+}
+
+.page-content .social-links a:hover::after { 
+    height: 100%;
+}
+.hero-sec{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(91, 50, 240);
+}
+.hero-sec .main-box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-sec .main-box .box{
+    background-color: rgb(0, 0, 0);
+    width: 375px;
+    padding: 20px;
+    height: 260px;
+    border-radius: 10px;
+    row-gap: 12px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+.hero-sec .main-box .box:hover{
+    background: #5cc7a433;
+    cursor: pointer;
+    border: 2px solid #afb6b4;
+}
+
+.hero-sec .main-box .box .head{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hero-sec .main-box .box .img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.hero-sec .main-box .box .more{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #a8afad;
+}
+.container{
+    min-height: 100vh;
+    background: #7973ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("bg.png") no-repeat center center/cover;
+}
+
+.container form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.container form h1{
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.container form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+
+.container form input::placeholder{
+    color: #ddd;
+}
+
+.container form #lastName,
+.container form #mobile{
+    margin-left: 20px;
+}
+
+.container form h4{
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.container form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: rgba(194,194,194,0.713);
+}
+
+.container form #button{
+    border: none;
+    background: #6063fa;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.container form #button:hover{
+    opacity: 0.7;
+}
+
